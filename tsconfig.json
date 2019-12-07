@@ -1,0 +1,17 @@
+{
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+        "baseUrl": "./",
+        "module": "commonjs",
+        "target": "es2018",
+        "lib": ["es2018", "dom"],
+        "strict": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "noErrorTruncation": true,
+        "resolveJsonModule": true,
+    },
+}
