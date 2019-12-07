@@ -1,0 +1,5 @@
+{
+  "hooks": {
+    "pre-push": "if git-branch-is master; then echo '마스터에 직접 푸시하지 마세요' >&2 && exit 1; elif git-branch-is develop; then npm run lint && npm test; else echo 'no test'; fi"
+  }
+}
