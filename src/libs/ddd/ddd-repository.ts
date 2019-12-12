@@ -2,7 +2,6 @@ import { flatMap } from 'lodash';
 import { Inject } from 'typedi';
 import { badImplementation } from '@hapi/boom';
 import {
-    EntityManager,
     throwBy,
     DuplicateEntryError,
     Specification,
