@@ -31,7 +31,6 @@ export abstract class DddModel<T> {
      */
     public toNullable(): Nullable<T> {
         const nullable = {};
-        // TODO: MP-573
         const propertyKeys = new Set(
             flatMap(
                 this.getClasses(), //
@@ -99,7 +98,6 @@ export abstract class DddModel<T> {
  */
 export function Identifier(): Function {
     return (target: Object, propertyKey: string) => {
-        // TODO: MP-573
         const metadataKey = `model:${target.constructor.name}:id`;
         const identifierKey = Reflect.getMetadata(metadataKey, target);
         if (identifierKey) {
@@ -115,7 +113,6 @@ export function Identifier(): Function {
 export function Property(): Function {
     // @ts-ignore
     return (target: Object, propertyKey: string) => {
-        // TODO: MP-573
         const metadataKey = `model:${target.constructor.name}`;
         const propertyKeys = Reflect.getMetadata(metadataKey, target);
         if (propertyKeys) {

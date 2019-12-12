@@ -45,7 +45,6 @@ export function PrimaryGeneratedColumn(...args: any[]): Function {
     // @ts-ignore
     const propertyDecorator = TypeOrmPrimaryGeneratedColumn(...args);
     return (target: Object, propertyKey: string) => {
-        // TODO: MP-573
         const metadataKey = `model:${target.constructor.name}`;
         const propertyKeys = Reflect.getMetadata(metadataKey, target);
         if (propertyKeys) {
@@ -64,7 +63,6 @@ export function Column(...args: any[]): Function {
     // @ts-ignore
     const propertyDecorator = TypeOrmColumn(...args);
     return (target: Object, propertyKey: string) => {
-        // TODO: MP-573
         const metadataKey = `model:${target.constructor.name}`;
         const propertyKeys = Reflect.getMetadata(metadataKey, target);
         if (propertyKeys) {
