@@ -1,5 +1,3 @@
-const entities: Object[] = [];
-
 export default {
     $filter: { $env: 'NODE_ENV' },
     production: {
@@ -11,7 +9,6 @@ export default {
         database: 'core',
         synchronize: false,
         logging: true,
-        entities,
         // migrations: ['src/migration/**/*.ts'],
         supportBigNumbers: true,
         bigNumberStrings: false,
@@ -20,12 +17,11 @@ export default {
         type: 'mysql',
         host: 'localhost',
         port: 3306,
-        username: 'root',
+        username: 'root', // TODO: value by environment
         password: '1234',
         database: 'core',
         synchronize: true,
         logging: true,
-        entities,
         // migrations: ['src/migration/**/*.ts'],
         supportBigNumbers: true,
         bigNumberStrings: false,

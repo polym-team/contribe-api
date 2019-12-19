@@ -12,6 +12,7 @@ import {
 } from './middlewares';
 import { globalRouter } from './routes';
 import { getConfig } from './config';
+import entities from './entities';
 
 const isProd: boolean = getConfig('/isProduction');
 // NOTE: confidence로 가져오면 객체가 손상되기 때문에 여기서 분기 처리를 한다.
@@ -21,7 +22,7 @@ const corsWhitelist = isProd
 const ormconfig = getConfig('/ormconfig');
 
 (async () => {
-    const conn = await createConnection(ormconfig); // TODO: TEMP
+    const conn = await createConnection({ ...ormconfig, entities }); // TODO: TEMP
 
     const app = new Koa();
 
