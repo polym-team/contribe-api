@@ -28,7 +28,7 @@
         "@hapi/boom": "^7.4.2",
         "@hapi/joi": "^15.1.0",
         "@koa/cors": "^2.2.3",
-        "class-transformer": "^0.2.3",
+        "class-transformer": "^0.3.1",
         "class-validator": "^0.9.1",
         "confidence": "^4.0.2",
         "http-graceful-shutdown": "^2.3.2",
